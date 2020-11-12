@@ -24,14 +24,15 @@ export class GameMgr extends Component{
         if(!this._inst){
             this._inst = new GameMgr();
         }
-        return this.inst;
+        return this._inst;
     }
+    /**当前游戏状态 */
     public gameState:GameState = GameState.NONE;
     private _score:number = 0;
     /**获取分数 */
     public get score():number{
         return this._score;
-    }
+    }                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       
 
     /**设置分数 */
     public set score(value:number){
@@ -42,5 +43,18 @@ export class GameMgr extends Component{
         }
     }
 
+    public reset(){
+        this.score = 0;
+        game.emit(GameEvent.PLAYER_RESET);
+    }
+
+    public play(){
+        this.score = 0;
+        this.gameState = GameState.PLAYING;
+    }
+
+    public gameOver(){
+        this.gameState = GameState.GAME_OVER;
+    }
 
 }

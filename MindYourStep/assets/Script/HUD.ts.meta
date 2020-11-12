@@ -1,0 +1,16 @@
+{
+  "ver": "4.0.1",
+  "importer": "typescript",
+  "imported": true,
+  "uuid": "d042dc94-e4ad-4d73-bd95-cf6caad553e5",
+  "files": [
+    ".js",
+    ".trans"
+  ],
+  "subMetas": {},
+  "userData": {
+    "importAsPlugin": false,
+    "moduleId": "project:///assets/Script/HUD.js",
+    "importerSettings": 0
+  }
+}

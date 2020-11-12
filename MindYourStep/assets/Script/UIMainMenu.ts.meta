@@ -1,0 +1,16 @@
+{
+  "ver": "4.0.1",
+  "importer": "typescript",
+  "imported": true,
+  "uuid": "d79e8f98-ec75-4d53-8942-276e02036a31",
+  "files": [
+    ".js",
+    ".trans"
+  ],
+  "subMetas": {},
+  "userData": {
+    "importAsPlugin": false,
+    "moduleId": "project:///assets/Script/UIMainMenu.js",
+    "importerSettings": 0
+  }
+}

@@ -1,6 +1,6 @@
 import { Component, Node, _decorator } from 'cc';
 const { ccclass, property } = _decorator;
-
+/**UI管理器 */
 @ccclass('UIMgr')
 export class UIMgr extends Component {
     private static _inst: UIMgr = null;

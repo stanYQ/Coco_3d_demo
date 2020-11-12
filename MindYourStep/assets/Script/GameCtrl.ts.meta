@@ -2,7 +2,7 @@
   "ver": "4.0.1",
   "importer": "typescript",
   "imported": true,
-  "uuid": "e62c3647-bd69-4ddc-b3c3-1049f2d3ca4e",
+  "uuid": "94994fd1-d262-47f1-ac1f-bfc11c4d754d",
   "files": [
     ".js",
     ".trans"
@@ -10,7 +10,7 @@
   "subMetas": {},
   "userData": {
     "importAsPlugin": false,
-    "moduleId": "project:///assets/Script/GameManager.js",
+    "moduleId": "project:///assets/Script/GameCtrl.js",
     "importerSettings": 0
   }
 }
