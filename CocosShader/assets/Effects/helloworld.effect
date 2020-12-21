@@ -1,0 +1,66 @@
+// Effect Syntax Guide: https://github.com/cocos-creator/docs-3d/blob/master/zh/material-system/effect-syntax.md
+
+CCEffect %{
+  techniques:
+  - name: opaque #techniques 的名称
+    passes:
+    - vert: unlit-vs:vert # 指定顶点着色器
+      frag: unlit-fs:frag # 指定像素着色器
+      properties: &props
+        mainColor:      { value: [1, 1, 1, 1], editor: { type: color } }
+      migrations: &migs
+        properties:
+}%
+
+CCProgram unlit-vs %{
+    //定义精度
+    precision highp float;
+    #include <input>
+    #include <cc-global>
+    #include <cc-local-batch>
+    #include <input>
+
+    vec4 vert(){
+        //获取顶点的位置信息 本地坐标系
+        vec4 position;
+        CCVertInput(position);
+
+        //获取世界坐标矩阵
+        mat4  matWorld;
+        CCGetWorldMatrix(matWorld);
+
+        //cc_matProj 投影矩阵
+        //cc_matView 摄像机矩阵
+        //matWorld 世界矩阵
+        //根据矩阵变换规则顶点需要经历如下变换
+        //本地空间->世界空间->摄像机空间->投影
+        //下面的代码是左乘，原因在于position为行向量，且矩阵为行矩阵
+        //B4x1 =M4x4 *A4x1
+
+        //注:
+        //虽然在OpenGL或者WebGL中默认是列向量和列矩阵。
+        //但由于显卡—个寄存器是4分里,刚好可以存储—个行向量。
+        //所以向里和矩阵在显卡里面是按行向里存储的,D3D采用行矩阵和行向里就是迎合显卡特性。
+
+        return cc_matProj * (cc_matView*matWorld)*position;
+    }
+}%
+
+CCProgram unlit-fs %{
+  precision highp float;
+  #include <output>
+
+
+
+  uniform Constant {
+    vec4 mainColor;
+  };
+
+  vec4 frag () {
+    float time = cc_time.x;
+    vec4 col = mainColor;
+    col.r *=  sin(time);
+    col.g *= abs( cos(time));
+    return CCFragOutput(col);
+  }
+}%
