@@ -1,0 +1,124 @@
+{
+  "ver": "1.3.24",
+  "importer": "fbx",
+  "imported": true,
+  "uuid": "e84c3b3c-fe32-4380-85b7-e4a98bbacbf4",
+  "files": [],
+  "subMetas": {
+    "76763": {
+      "importer": "gltf-scene",
+      "uuid": "e84c3b3c-fe32-4380-85b7-e4a98bbacbf4@76763",
+      "displayName": "",
+      "id": "76763",
+      "name": "truck02.prefab",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.11",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "5d0b5": {
+      "importer": "gltf-mesh",
+      "uuid": "e84c3b3c-fe32-4380-85b7-e4a98bbacbf4@5d0b5",
+      "displayName": "",
+      "id": "5d0b5",
+      "name": "car_005_0.mesh",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.1.0",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "203a2": {
+      "importer": "gltf-embeded-image",
+      "uuid": "e84c3b3c-fe32-4380-85b7-e4a98bbacbf4@203a2",
+      "displayName": "",
+      "id": "203a2",
+      "name": "truck02Blue.jpg.image",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.3",
+      "imported": true,
+      "files": [
+        ".jpg",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "3a1cd": {
+      "importer": "texture",
+      "uuid": "e84c3b3c-fe32-4380-85b7-e4a98bbacbf4@3a1cd",
+      "displayName": "",
+      "id": "3a1cd",
+      "name": "truck02Blue.texture",
+      "userData": {
+        "wrapModeS": "repeat",
+        "wrapModeT": "repeat",
+        "minfilter": "linear",
+        "magfilter": "linear",
+        "mipfilter": "none",
+        "anisotropy": 1,
+        "isUuid": true,
+        "imageUuidOrDatabaseUri": "e84c3b3c-fe32-4380-85b7-e4a98bbacbf4@203a2"
+      },
+      "ver": "1.0.20",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "5f218": {
+      "importer": "gltf-material",
+      "uuid": "e84c3b3c-fe32-4380-85b7-e4a98bbacbf4@5f218",
+      "displayName": "",
+      "id": "5f218",
+      "name": "truck02Blue.material",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    }
+  },
+  "userData": {
+    "imageMetas": [
+      {
+        "name": "truck02Blue.jpg",
+        "uri": "e84c3b3c-fe32-4380-85b7-e4a98bbacbf4@203a2"
+      }
+    ],
+    "redirect": "e84c3b3c-fe32-4380-85b7-e4a98bbacbf4@76763",
+    "assetFinder": {
+      "meshes": [
+        "e84c3b3c-fe32-4380-85b7-e4a98bbacbf4@5d0b5"
+      ],
+      "skeletons": [],
+      "textures": [
+        "e84c3b3c-fe32-4380-85b7-e4a98bbacbf4@3a1cd"
+      ],
+      "materials": [
+        "e84c3b3c-fe32-4380-85b7-e4a98bbacbf4@5f218"
+      ],
+      "scenes": [
+        "e84c3b3c-fe32-4380-85b7-e4a98bbacbf4@76763"
+      ]
+    },
+    "dumpMaterials": false,
+    "materialDumpDir": "db://assets/model/cars/truck/Materials_truck02"
+  }
+}
