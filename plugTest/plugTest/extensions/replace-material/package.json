@@ -1,0 +1,34 @@
+{
+    "package_version": 2,
+    "version": "1.0.0",
+    "name": "replace-material",
+    "description": "i18n:replace-material.description",
+    "main": "./dist/main.js",
+    "contributions": {
+        "menu": [
+            {
+                "path": "i18n:menu.extension",
+                "label": "i18n:replace-material.material",
+                "message": "replace"
+            }
+        ],
+        "messages": {
+            "replace": {
+                "public": true,
+                "methods": [
+                    "replace"
+                ]
+            }
+        }
+    },
+    "devDependencies": {
+        "@types/node": "^16.0.1",
+        "typescript": "^4.3.4"
+    },
+    "author": "Cocos Creator",
+    "editor": ">=3.3.0",
+    "scripts": {
+        "build": "tsc -b",
+        "watch": "tsc -w"
+    }
+}

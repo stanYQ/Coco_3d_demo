@@ -1,0 +1,53 @@
+{
+    "package_version": 2,
+    "version": "1.0.0",
+    "name": "replace-material",
+    "description": "i18n:replace-material.description",
+    "main": "./dist/main.js",
+    "author": "Cocos Creator",
+    //引擎版本必须大于 2.3.0
+    "editor": ">=2.3.0",
+    //定义了插件面板最终展示的样式和面板的信息交互
+    "panels": {},
+    //定义了自身以及拓展之前的一些交互数据
+    "contributions": {
+        "menu": [
+            {
+                "path": "按钮在菜单栏的路径", //i18n:menu.extension/open
+                "label": "按钮的文本",
+                "icon": "./xxx/png", //按钮的icon
+                "message": "name" //按钮点击触发的消息
+            },
+            //参考replace
+            {
+                "path": "i18n:menu.extension",
+                "label": "i18n:replace-material.material",
+                "message": "replace"
+            }
+        ],
+        //消息机制
+        "messages": {
+            //消息名
+            "name": {
+                //是否被人 看到在可以开发者菜单中消息列表看到
+                "public": true,
+                "description": "消息的描述",
+                "doc": "消息文档可以markdown的形式进行注入",
+                //消息的回调 定义在主进程中 main.js
+                "methods": [
+                    "callback"
+                ]
+            }
+        },
+        "shortcuts": {},
+        "profiler": {}
+    },
+    "devDependencies": {
+        "@types/node": "^16.0.1",
+        "typescript": "^4.3.4"
+    },
+    "scripts": {
+        "build": "tsc -b",
+        "watch": "tsc -w"
+    }
+}

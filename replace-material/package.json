@@ -1,0 +1,68 @@
+{
+    "name": "replace-material",
+    "version": "1.0.0",
+    "description": "A simple plug-in",
+    "author": "Unknown",
+    "main": "browser.js",
+    "panels": {
+        "list": {
+            "title": "replace material",
+            "main": "./panel/panel.js"
+        }
+    },
+    "contributions": {
+        "menu": [
+            {
+                "path": "Extension",
+                "label": "replace-material",
+                "message": "open-panel"
+            }
+        ],
+        "messages": {
+            "open-panel": {
+                "public": true,
+                "methods": [
+                    "openPanel"
+                ]
+            },
+            "replace": {
+                "public": true,
+                "methods": [
+                    "replace"
+                ]
+            },
+            "save-data": {
+                "public": true,
+                "methods": [
+                    "saveData"
+                ]
+            },
+            "get-data": {
+                "public": true,
+                "methods": [
+                    "getData"
+                ]
+            },
+            "change-mat": {
+                "public": true,
+                "methods": [
+                ]
+            }
+        },
+        "shortcuts": [
+            {
+                "message": "open-panel",
+                "mac": "cmd+i"
+            }
+        ],
+        "profile":{
+            "project":{
+                "mat":{
+                    "default":"",
+                    "message":"change-mat",
+                    "label":""
+                }
+            }
+        }
+    }
+}
