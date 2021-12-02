@@ -1,0 +1,22 @@
+<div id="app" class="layout vertical" style="height: 100%;">
+    <div class="flex" style="width: 100%;overflow:scroll;height: 90%;">
+        <div class="layout horizontal item" v-for="color in colors" :key="color.colorName">
+            <ui-input :value="color.colorName" style="width: 120px;"></ui-input>
+            <ui-color class="showColor" :value="color.colorRGB"></ui-color>
+            <span style=" margin-top: 10px; margin-left: 20px;">描述：</span>
+            <ui-input :value="color.describe" style="width:300px"></ui-input>
+            <ui-button style="margin-top: 5px;" v-on:confirm="onRemoveBtnClick(color.colorName)">删除</ui-button>
+        </div>
+    </div>
+    <div class="bottom">
+        <div class="layout horizontal" style="height:40px;">
+            <span style="margin-top: 10px; margin-left: 20px;">名稱：</span>
+            <ui-input :value="addInfo.colorName" placeholder="Name..." style="width: 150px"></ui-input>
+            <ui-color class="showColor" :value="addInfo.colorRGB"></ui-color>
+            <span style=" margin-top: 10px; margin-left: 20px;">描述：</span>
+            <ui-input :value="addInfo.describe" placeholder="Describe..." style="width:300px"></ui-input>
+            <ui-button v-on:confirm="onAddBtnClick">添加</ui-button>
+            <ui-button v-on:confirm="onDeriveBtnClick">保存</ui-button>
+        </div>
+    </div>
+</div>

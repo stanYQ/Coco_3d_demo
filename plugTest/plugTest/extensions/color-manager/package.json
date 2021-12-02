@@ -1,0 +1,46 @@
+{
+    "package_version": 2,
+    "version": "1.0.0",
+    "name": "color-manager",
+    "description": "i18n:color-manager.description",
+    "main": "./dist/main.js",
+    "contributions": {
+        "menu": [
+            {
+                "path": "i18n:menu.extension",
+                "label": "i18n:color-manager.title",
+                "message": "open"
+            }
+        ],
+        "messages": {
+            "open": {
+                "methods": [
+                    "open"
+                ]
+            }
+        }
+    },
+    "panels": {
+        "default": {
+            "title": "i18n:color-manager.title",
+            "main": "./dist/panel/index.js",
+            "type": "dockable",
+            "width": 960,
+            "height": 850
+        }
+    },
+    "devDependencies": {
+        "@types/node": "^16.11.7",
+        "typescript": "^4.3.4"
+    },
+    "author": "Cocos Creator",
+    "editor": ">=3.3.0",
+    "scripts": {
+        "build": "tsc -b",
+        "watch": "tsc -w"
+    },
+    "dependencies": {
+        "fs": "0.0.1-security",
+        "vue": "^2.6.14"
+    }
+}
